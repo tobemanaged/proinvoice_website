@@ -16,7 +16,7 @@ jobs:
 
             - name: Code is run on environment
               run: |
-                echo "ACTION_ENVIRONMENT is set, length: ${{ env.ACTION_ENVIRONMENT }}"
+                echo "ACTION_ENVIRONMENT is set, length: ${{ vars.ACTION_ENVIRONMENT }}"
 
             - name: Deploy to production server
               uses: SamKirkland/FTP-Deploy-Action@v4.3.6
