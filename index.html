@@ -5,47 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ProInvoice - Eenvoudige Facturering via Peppol</title>
     <meta name="description" content="Creëer en verstuur facturen via het Peppol netwerk. Eenvoudige facturering met inzicht in ARR en MRR.">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: {
-                            50: '#f0f9ff',
-                            100: '#e0f2fe',
-                            200: '#bae6fd',
-                            300: '#7dd3fc',
-                            400: '#38bdf8',
-                            500: '#0ea5e9',
-                            600: '#0284c7',
-                            700: '#0369a1',
-                            800: '#075985',
-                            900: '#0c4a6e',
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        @keyframes gradient {
-            0% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-            100% {
-                background-position: 0% 50%;
-            }
-        }
-        .gradient-animation {
-            background: linear-gradient(-45deg, #0ea5e9, #0284c7, #0369a1, #38bdf8);
-            background-size: 400% 400%;
-            animation: gradient 15s ease infinite;
-        }
-    </style>
+    <link href="styles.css" rel="stylesheet">
 </head>
 <body class="antialiased bg-white">
     <!-- Navigation -->

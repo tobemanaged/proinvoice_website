@@ -1,0 +1,6 @@
+# Tailwind build tool
+tailwindcss-linux-x64
+
+# Build inputs (not needed for deployment, only styles.css is needed)
+input.css
+tailwind.config.js
