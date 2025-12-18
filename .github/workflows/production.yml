@@ -16,12 +16,12 @@ jobs:
 
             - name: Code is run on environment
               run: |
-                echo "ACTION_ENVIRONMENT is set, length: ${{ vars.ACTION_ENVIRONMENT }}"
+                echo "ACTION_ENVIRONMENT is set, length: ${{ env.ACTION_ENVIRONMENT }}"
 
             - name: Deploy to production server
               uses: SamKirkland/FTP-Deploy-Action@v4.3.6
               with:
-                  server: ${{ env.secrets.FTP_HOST }}
+                  server: ${{ secrets.FTP_HOST }}
                   username: ${{ secrets.FTP_USER }}
                   password: ${{ secrets.FTP_PASSWORD }}
                   security: strict
