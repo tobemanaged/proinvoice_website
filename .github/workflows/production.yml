@@ -14,14 +14,14 @@ jobs:
             - name: Get latest code
               uses: actions/checkout@v4
 
-            - name: Debug Secrets
+            - name: Code is run on environment
               run: |
-                echo "FTP_HOST is set, length: ${{ secrets.FTP_HOST }}"
+                echo "ACTION_ENVIRONMENT is set, length: ${{ vars.ACTION_ENVIRONMENT }}"
 
             - name: Deploy to production server
               uses: SamKirkland/FTP-Deploy-Action@v4.3.6
               with:
-                  server: ${{ secrets.FTP_HOST }}
+                  server: ${{ env.secrets.FTP_HOST }}
                   username: ${{ secrets.FTP_USER }}
                   password: ${{ secrets.FTP_PASSWORD }}
                   security: strict
