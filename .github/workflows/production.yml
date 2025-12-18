@@ -8,6 +8,7 @@ jobs:
     web-deploy:
         name: Deploy to Production Server
         runs-on: ubuntu-latest
+        environment: production
         permissions:
             contents: read
         steps:
