@@ -1,20 +1,15 @@
 name: production deployment
-env:
-    ACTIONS_STEP_DEBUG: true
-
 on:
     push:
         branches:
             - main
 
-permissions:
-    contents: read
-
 jobs:
     web-deploy:
         name: Deploy to Production Server
         runs-on: ubuntu-latest
-
+        permissions:
+            contents: read
         steps:
             - name: Get latest code
               uses: actions/checkout@v4
