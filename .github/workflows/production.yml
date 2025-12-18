@@ -9,15 +9,16 @@ permissions:
     contents: read
 
 jobs:
-    build:
+    web-deploy:
+        name: Deploy to Production Server
         runs-on: ubuntu-latest
 
         steps:
-            - name: Checking repository
+            - name: Get latest code
               uses: actions/checkout@v4
 
             - name: Deploy to production server
-              uses: SamKirkland/FTP-Deploy-Action@4.3.6
+              uses: SamKirkland/FTP-Deploy-Action@v4.3.6
               with:
                   server: ${{ secrets.FTP_HOST }}
                   username: ${{ secrets.FTP_USER }}
