@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProInvoice - Eenvoudige Facturering via Peppol</title>
+    <meta name="description" content="Creëer en verstuur facturen via het Peppol netwerk. Eenvoudige facturering met inzicht in ARR en MRR.">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body class="antialiased bg-white">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <svg class="h-8 w-8 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                    <span class="ml-2 text-xl font-bold text-gray-900">ProInvoice</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#features" class="text-gray-700 hover:text-primary-600 transition">Functionaliteit</a>
+                    <a href="#peppol" class="text-gray-700 hover:text-primary-600 transition">Peppol</a>
+                    <a href="#insights" class="text-gray-700 hover:text-primary-600 transition">Inzichten</a>
+                    <a href="#pricing" class="text-gray-700 hover:text-primary-600 transition">Prijzen</a>
+                </div>
+                <div>
+                    <a href="#start" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-primary-600 hover:bg-primary-700 transition">
+                        Start Nu
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 sm:pt-40 sm:pb-24 overflow-hidden">
+        <div class="absolute inset-0 gradient-animation opacity-10"></div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl sm:text-6xl font-extrabold text-gray-900 tracking-tight">
+                    <span class="block">Facturering via Peppol</span>
+                    <span class="block text-primary-600">Eenvoudig en Slim</span>
+                </h1>
+                <p class="mt-6 max-w-2xl mx-auto text-xl text-gray-600">
+                    Creëer en verstuur facturen rechtstreeks via het Peppol netwerk. 
+                    Krijg waardevolle inzichten in je ARR en MRR met ProInvoice.
+                </p>
+                <div class="mt-10 flex justify-center gap-4">
+                    <a href="#start" class="inline-flex items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary-600 hover:bg-primary-700 transition shadow-lg hover:shadow-xl">
+                        Gratis Proberen
+                        <svg class="ml-2 -mr-1 w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                        </svg>
+                    </a>
+                    <a href="#demo" class="inline-flex items-center px-8 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition">
+                        Bekijk Demo
+                    </a>
+                </div>
+            </div>
+            <div class="mt-16">
+                <div class="relative mx-auto max-w-5xl">
+                    <div class="relative rounded-xl shadow-2xl overflow-hidden border border-gray-200">
+                        <div class="bg-gray-800 px-4 py-3 flex items-center space-x-2">
+                            <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                        </div>
+                        <div class="bg-gradient-to-br from-primary-50 to-primary-100 p-8">
+                            <div class="bg-white rounded-lg shadow-lg p-6 max-w-2xl mx-auto">
+                                <div class="flex justify-between items-start mb-6">
+                                    <div>
+                                        <h3 class="text-2xl font-bold text-gray-900">FACTUUR</h3>
+                                        <p class="text-gray-600">#INV-2024-001</p>
+                                    </div>
+                                    <div class="text-right">
+                                        <p class="text-sm text-gray-600">Datum</p>
+                                        <p class="font-semibold">18-12-2025</p>
+                                    </div>
+                                </div>
+                                <div class="border-t border-gray-200 pt-4 mb-4">
+                                    <div class="flex justify-between py-2">
+                                        <span class="text-gray-600">Webdesign Diensten</span>
+                                        <span class="font-semibold">€2.500,00</span>
+                                    </div>
+                                    <div class="flex justify-between py-2">
+                                        <span class="text-gray-600">Hosting (maandelijks)</span>
+                                        <span class="font-semibold">€150,00</span>
+                                    </div>
+                                </div>
+                                <div class="border-t-2 border-gray-300 pt-4">
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-lg font-bold">Totaal</span>
+                                        <span class="text-2xl font-bold text-primary-600">€2.650,00</span>
+                                    </div>
+                                </div>
+                                <div class="mt-4 flex items-center text-sm text-green-600">
+                                    <svg class="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                    Verzonden via Peppol Netwerk
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-5xl font-extrabold text-gray-900">
+                    Alles wat je nodig hebt
+                </h2>
+                <p class="mt-4 text-xl text-gray-600">
+                    ProInvoice maakt facturering eenvoudig en effectief
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition">
+                    <div class="inline-flex items-center justify-center w-12 h-12 bg-primary-100 rounded-lg mb-4">
+                        <svg class="w-6 h-6 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Supersnel</h3>
+                    <p class="text-gray-600">
+                        Creëer professionele facturen in seconden. Geen gedoe, geen complexe instellingen.
+                    </p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition">
+                    <div class="inline-flex items-center justify-center w-12 h-12 bg-primary-100 rounded-lg mb-4">
+                        <svg class="w-6 h-6 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Peppol Integratie</h3>
+                    <p class="text-gray-600">
+                        Directe verzending via het Peppol netwerk. Veilig, betrouwbaar en conform standaarden.
+                    </p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition">
+                    <div class="inline-flex items-center justify-center w-12 h-12 bg-primary-100 rounded-lg mb-4">
+                        <svg class="w-6 h-6 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">ARR & MRR Inzichten</h3>
+                    <p class="text-gray-600">
+                        Realtime inzicht in je jaarlijkse en maandelijkse terugkerende omzet.
+                    </p>
+                </div>
+                <!-- Feature 4 -->
+                <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition">
+                    <div class="inline-flex items-center justify-center w-12 h-12 bg-primary-100 rounded-lg mb-4">
+                        <svg class="w-6 h-6 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Veilig & Compliant</h3>
+                    <p class="text-gray-600">
+                        Volledig voldoen aan EU-regelgeving. Jouw data is veilig en encrypted.
+                    </p>
+                </div>
+                <!-- Feature 5 -->
+                <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition">
+                    <div class="inline-flex items-center justify-center w-12 h-12 bg-primary-100 rounded-lg mb-4">
+                        <svg class="w-6 h-6 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Automatische Herinneringen</h3>
+                    <p class="text-gray-600">
+                        Automatische betalingsherinneringen zorgen ervoor dat je sneller betaald wordt.
+                    </p>
+                </div>
+                <!-- Feature 6 -->
+                <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition">
+                    <div class="inline-flex items-center justify-center w-12 h-12 bg-primary-100 rounded-lg mb-4">
+                        <svg class="w-6 h-6 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Rapportages</h3>
+                    <p class="text-gray-600">
+                        Uitgebreide rapportages en overzichten van je facturatie en inkomsten.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Peppol Section -->
+    <section id="peppol" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl sm:text-5xl font-extrabold text-gray-900 mb-6">
+                        Powered by Peppyrus Peppol Access Point
+                    </h2>
+                    <p class="text-xl text-gray-600 mb-6">
+                        ProInvoice is gebaseerd op het Peppyrus Peppol Access Point, een betrouwbaar en 
+                        geverifieerd toegangspunt tot het Peppol netwerk.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <svg class="h-6 w-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                            </div>
+                            <p class="ml-3 text-gray-700">
+                                <span class="font-semibold">Directe levering:</span> Facturen worden direct afgeleverd bij je klanten
+                            </p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <svg class="h-6 w-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                            </div>
+                            <p class="ml-3 text-gray-700">
+                                <span class="font-semibold">Gestandaardiseerd:</span> UBL-formaat voor maximale compatibiliteit
+                            </p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <svg class="h-6 w-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                            </div>
+                            <p class="ml-3 text-gray-700">
+                                <span class="font-semibold">Internationaal:</span> Verstuur facturen naar heel Europa
+                            </p>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <svg class="h-6 w-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                            </div>
+                            <p class="ml-3 text-gray-700">
+                                <span class="font-semibold">Betrouwbaar:</span> 99.9% uptime garantie voor je facturatie
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="bg-gradient-to-br from-primary-400 to-primary-600 rounded-xl shadow-2xl p-8">
+                        <div class="bg-white rounded-lg p-6 shadow-lg">
+                            <div class="flex items-center justify-between mb-4">
+                                <h4 class="text-lg font-bold text-gray-900">Peppol Netwerk</h4>
+                                <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                            </div>
+                            <div class="space-y-3">
+                                <div class="flex items-center justify-between p-3 bg-gray-50 rounded">
+                                    <span class="text-sm text-gray-600">ProInvoice</span>
+                                    <svg class="w-5 h-5 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                                    </svg>
+                                </div>
+                                <div class="flex items-center justify-between p-3 bg-gray-50 rounded">
+                                    <span class="text-sm text-gray-600">Peppyrus AP</span>
+                                    <svg class="w-5 h-5 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                                    </svg>
+                                </div>
+                                <div class="flex items-center justify-between p-3 bg-gray-50 rounded">
+                                    <span class="text-sm text-gray-600">Peppol Network</span>
+                                    <svg class="w-5 h-5 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                                    </svg>
+                                </div>
+                                <div class="flex items-center justify-between p-3 bg-green-50 rounded border-2 border-green-500">
+                                    <span class="text-sm font-semibold text-green-700">Jouw Klant ✓</span>
+                                    <svg class="w-5 h-5 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Insights Section -->
+    <section id="insights" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="order-2 lg:order-1">
+                    <div class="bg-white rounded-xl shadow-2xl p-8">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">Omzet Overzicht</h3>
+                        <div class="space-y-6">
+                            <div class="border-b border-gray-200 pb-4">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-sm text-gray-600">Maandelijkse Terugkerende Omzet</span>
+                                    <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">+12%</span>
+                                </div>
+                                <div class="text-3xl font-bold text-gray-900">€12.450</div>
+                                <div class="text-sm text-gray-500 mt-1">MRR</div>
+                            </div>
+                            <div class="border-b border-gray-200 pb-4">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-sm text-gray-600">Jaarlijkse Terugkerende Omzet</span>
+                                    <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">+18%</span>
+                                </div>
+                                <div class="text-3xl font-bold text-gray-900">€149.400</div>
+                                <div class="text-sm text-gray-500 mt-1">ARR</div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-sm text-gray-600">Deze Maand</span>
+                                    <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">Op schema</span>
+                                </div>
+                                <div class="text-3xl font-bold text-primary-600">€15.280</div>
+                                <div class="text-sm text-gray-500 mt-1">Totale Facturatie</div>
+                            </div>
+                        </div>
+                        <div class="mt-6 pt-6 border-t border-gray-200">
+                            <div class="grid grid-cols-3 gap-4 text-center">
+                                <div>
+                                    <div class="text-2xl font-bold text-gray-900">45</div>
+                                    <div class="text-xs text-gray-600">Facturen</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-gray-900">38</div>
+                                    <div class="text-xs text-gray-600">Betaald</div>
+                                </div>
+                                <div>
+                                    <div class="text-2xl font-bold text-gray-900">7</div>
+                                    <div class="text-xs text-gray-600">Openstaand</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-1 lg:order-2">
+                    <h2 class="text-3xl sm:text-5xl font-extrabold text-gray-900 mb-6">
+                        Inzicht in je Omzet
+                    </h2>
+                    <p class="text-xl text-gray-600 mb-6">
+                        Met ProInvoice heb je altijd real-time inzicht in je maandelijkse (MRR) en 
+                        jaarlijkse (ARR) terugkerende omzet.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <svg class="h-6 w-6 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                                </svg>
+                            </div>
+                            <div class="ml-3">
+                                <h4 class="font-semibold text-gray-900">Automatische Berekening</h4>
+                                <p class="text-gray-600">ARR en MRR worden automatisch berekend op basis van je facturatie</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <svg class="h-6 w-6 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                                </svg>
+                            </div>
+                            <div class="ml-3">
+                                <h4 class="font-semibold text-gray-900">Groei Tracking</h4>
+                                <p class="text-gray-600">Volg je groei maand over maand en jaar over jaar</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <svg class="h-6 w-6 text-primary-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                            <div class="ml-3">
+                                <h4 class="font-semibold text-gray-900">Dienst Categorisatie</h4>
+                                <p class="text-gray-600">Categoriseer diensten voor nauwkeurige MRR/ARR berekeningen</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-5xl font-extrabold text-gray-900">
+                    Transparante Prijzen
+                </h2>
+                <p class="mt-4 text-xl text-gray-600">
+                    Kies het plan dat bij jou past
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Starter Plan -->
+                <div class="bg-white rounded-xl shadow-lg p-8 border-2 border-gray-200">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Starter</h3>
+                    <div class="mb-6">
+                        <span class="text-4xl font-extrabold text-gray-900">€19</span>
+                        <span class="text-gray-600">/maand</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-green-500 mt-0.5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span class="text-gray-700">Tot 50 facturen/maand</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-green-500 mt-0.5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span class="text-gray-700">Peppol verzending</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-green-500 mt-0.5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span class="text-gray-700">Basis rapportages</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-green-500 mt-0.5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span class="text-gray-700">Email ondersteuning</span>
+                        </li>
+                    </ul>
+                    <a href="#start" class="block w-full text-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition">
+                        Start Starter
+                    </a>
+                </div>
+
+                <!-- Professional Plan -->
+                <div class="bg-gradient-to-br from-primary-600 to-primary-700 rounded-xl shadow-2xl p-8 border-2 border-primary-600 transform scale-105">
+                    <div class="bg-white rounded-md px-3 py-1 inline-block mb-4">
+                        <span class="text-primary-600 font-semibold text-sm">Populair</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-2">Professional</h3>
+                    <div class="mb-6">
+                        <span class="text-4xl font-extrabold text-white">€49</span>
+                        <span class="text-primary-100">/maand</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-white mt-0.5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span class="text-white">Onbeperkt facturen</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-white mt-0.5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span class="text-white">Peppol verzending</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-white mt-0.5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span class="text-white">ARR & MRR inzichten</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-white mt-0.5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span class="text-white">Uitgebreide rapportages</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-white mt-0.5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span class="text-white">Prioriteit ondersteuning</span>
+                        </li>
+                    </ul>
+                    <a href="#start" class="block w-full text-center px-6 py-3 border-2 border-white text-base font-medium rounded-md text-primary-600 bg-white hover:bg-gray-50 transition">
+                        Start Professional
+                    </a>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="bg-white rounded-xl shadow-lg p-8 border-2 border-gray-200">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Enterprise</h3>
+                    <div class="mb-6">
+                        <span class="text-4xl font-extrabold text-gray-900">Custom</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-green-500 mt-0.5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span class="text-gray-700">Alles van Professional</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-green-500 mt-0.5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span class="text-gray-700">API toegang</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-green-500 mt-0.5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span class="text-gray-700">Dedicated account manager</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-green-500 mt-0.5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span class="text-gray-700">Custom integraties</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="block w-full text-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 transition">
+                        Neem Contact Op
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="start" class="py-20 bg-gradient-to-br from-primary-600 to-primary-700">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-5xl font-extrabold text-white mb-6">
+                Klaar om te beginnen?
+            </h2>
+            <p class="text-xl text-primary-100 mb-8">
+                Start vandaag nog met ProInvoice en ervaar hoe eenvoudig factureren kan zijn.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#signup" class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-medium rounded-md text-primary-600 bg-white hover:bg-gray-50 transition shadow-lg hover:shadow-xl">
+                    Start Gratis Trial
+                </a>
+                <a href="#demo" class="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-lg font-medium rounded-md text-white hover:bg-white hover:text-primary-600 transition">
+                    Plan een Demo
+                </a>
+            </div>
+            <p class="mt-6 text-primary-100 text-sm">
+                Geen creditcard vereist • 14 dagen gratis proberen • Altijd opzegbaar
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <svg class="h-8 w-8 text-primary-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                        </svg>
+                        <span class="ml-2 text-xl font-bold text-white">ProInvoice</span>
+                    </div>
+                    <p class="text-sm text-gray-400">
+                        Eenvoudige facturering via het Peppol netwerk met waardevolle business inzichten.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Product</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#features" class="hover:text-primary-400 transition">Functionaliteit</a></li>
+                        <li><a href="#peppol" class="hover:text-primary-400 transition">Peppol</a></li>
+                        <li><a href="#insights" class="hover:text-primary-400 transition">Inzichten</a></li>
+                        <li><a href="#pricing" class="hover:text-primary-400 transition">Prijzen</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Bedrijf</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="hover:text-primary-400 transition">Over Ons</a></li>
+                        <li><a href="#contact" class="hover:text-primary-400 transition">Contact</a></li>
+                        <li><a href="#blog" class="hover:text-primary-400 transition">Blog</a></li>
+                        <li><a href="#careers" class="hover:text-primary-400 transition">Vacatures</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Juridisch</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#privacy" class="hover:text-primary-400 transition">Privacy</a></li>
+                        <li><a href="#terms" class="hover:text-primary-400 transition">Voorwaarden</a></li>
+                        <li><a href="#security" class="hover:text-primary-400 transition">Beveiliging</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-sm text-gray-400">
+                    © 2025 ProInvoice. Alle rechten voorbehouden.
+                </p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-primary-400 transition">
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-primary-400 transition">
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-primary-400 transition">
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll effect to navigation
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-lg');
+            } else {
+                nav.classList.remove('shadow-lg');
+            }
+        });
+    </script>
+</body>
+</html>
