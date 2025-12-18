@@ -1,0 +1,25 @@
+name: production deployment
+
+on:
+    push:
+        branches:
+            - main
+
+permissions:
+    contents: read
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checking repository
+              uses: actions/checkout@v4
+
+            - name: Deploy to production server
+              uses: SamKirkland/FTP-Deploy-Action@4.3.4
+              with:
+                  server: ${{ secrets.FTP_HOST }}
+                  username: ${{ secrets.FTP_USER }}
+                  password: ${{ secrets.FTP_PASSWORD }}
+                  security: strict
